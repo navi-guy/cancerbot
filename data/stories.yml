@@ -420,6 +420,7 @@ stories:
   - action: utter_posibilidades
   - intent: tema_iniciar_etapa
   - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
 
 - story: saludo + tema iniciar etapa + cuidados de seguimiento + qdecir + oos +mitos cancer
   steps:
@@ -511,6 +512,7 @@ stories:
   - action: utter_posibilidades
   - intent: tema_iniciar_etapa
   - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
 
 - story: saludo + mitos cancer + oos + efectos tardios
   steps:

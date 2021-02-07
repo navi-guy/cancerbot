@@ -17,16 +17,11 @@ rules:
   - intent: need_help
   - action: utter_how_help
 
-- rule: User saluda
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-
 - rule: Tema iniciar etapa
   steps:
-    - intent: tema_iniciar_etapa
-    - action: utter_iniciar_etapa
-    - action: utter_q_iniciar_etapa
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
 
 - rule: Tema efectos tardios
   steps:
