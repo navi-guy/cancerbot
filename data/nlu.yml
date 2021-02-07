@@ -1,5 +1,7 @@
 version: "2.0"
+
 nlu:
+# tema síntomas
 - intent: tema_sintomas
   examples: |
     - Sintomas
@@ -10,6 +12,7 @@ nlu:
     - Síntomas del cancer de cuello uterino?
     - Los síntomas que tengo son ...
     - Síntomas del cancer
+
 - intent: con_fatiga
   examples: |
     - ¿Es normal tener fatiga?
@@ -23,6 +26,7 @@ nlu:
     - me siento cansada a todas horas
     - me siento bastante agotada
     - estoy agotada
+
 - intent: con_tension
   examples: |
     - Tengo mucha tension
@@ -36,6 +40,7 @@ nlu:
     - siento mucha angustia
     - me preocupo por todo, no puedo dormir
     - estoy muy preocupada
+
 - intent: con_depresion
   examples: |
     - Tengo depresión
@@ -50,6 +55,8 @@ nlu:
     - tristeza :'(
     - deprimida
     - depresión
+
+# tema iniciar etapa
 - intent: tema_iniciar_etapa
   examples: |
     - ¿Qué es lo normal después del tratamiento de cáncer?
@@ -62,6 +69,7 @@ nlu:
     - consejos para esta nueva fase
     - estoy iniciando esta nueva fase
     - estoy en un inicio de la etapa
+
 - intent: con_cuidados_seguimiento
   examples: |
     - Qué son los cuidados de seguimiento
@@ -71,6 +79,7 @@ nlu:
     - q son los cuidados de seguimiento al paciente
     - si deseo saber, que son los cuidados de seguimiento
     - seguimiento cuidados...
+
 - intent: con_que_decir_al_medico
   examples: |
     - ¿Qué debo decirle a mi médico?
@@ -80,6 +89,7 @@ nlu:
     - hablar con el médico
     - que decir al médico en las citas
     - que decir al médico...
+
 - intent: con_cambio_habitos
   examples: |
     - ¿Qué cambios debo hacer en mis habitos?
@@ -90,6 +100,8 @@ nlu:
     - Cambiar mi rutinas
     - ¿Cómo deben ser mis habitos alimenticios ahora?
     - consejos para cambiar mis habitos...
+
+# tema mitos y verdades del cancer
 - intent: con_mitos_cancer
   examples: |
     - ¿Cuáles son los mitos y verdades del cáncer?
@@ -100,6 +112,9 @@ nlu:
     - mitos del cancer por favor
     - ¿Cuales son los mitos del cancer?
     - mitos y verdades...
+
+
+# tema efectos secundarios tardios
 - intent: con_efectos_secundarios_tardios
   examples: |
     - ¿Cuáles son efectos secundarios tardios del tratamiento del cáncer?
@@ -110,6 +125,7 @@ nlu:
     - efectos secundarios tardios por favor
     - ¿Cuales son los efectos secundarios tardios?
     - efectos secundarios a largo plazo...
+
 - intent: quimioterapia
   examples: |
     - quimioterapia
@@ -122,6 +138,7 @@ nlu:
     - tratamiento de quimioterapia
     - quimio terapia
     - quimioterapa
+
 - intent: radioterapia
   examples: |
     - radioterapia
@@ -135,6 +152,7 @@ nlu:
     - radio terapia
     - radioterapa
     - radiación
+
 - intent: otra_terapia
   examples: |
     - otra_terapia
@@ -142,7 +160,10 @@ nlu:
     - otra
     - otro
     - otro tratamiento
+    - otra terapia
     - otroa
+
+# tema duda_comun
 - intent: tema_duda_comun
   examples: |
     - Duda comun
@@ -153,7 +174,7 @@ nlu:
     - algunas dudas
     - ¿Dudas comúnes?
     - Dudas comunes!!
-    - tengo algunas dudas
+
 - intent: con_c_hereditario
   examples: |
     - ¿Mis hijos pueden padecer cáncer?
@@ -164,7 +185,7 @@ nlu:
     - ¿Es posible que mis hijas contraigan cancer de cuello uterino?
     - ¿El cáncer es hereditario?
     - es hereditaria mi cancer
-    - elcancer es hereditario?
+
 - intent: con_problemas_familiares
   examples: |
     - problemas familiares
@@ -175,6 +196,7 @@ nlu:
     - Ideas para manejar problemas con mi familia
     - Como llevar los problemas familiares
     - eso de problemas familiareS?
+
 - intent: con_grupo_de_ayuda
   examples: |
     - grupo de ayuda
@@ -184,6 +206,8 @@ nlu:
     - debo meterme a un grupo de ayuda?
     - debo entrar a un grupo de ayuda?
     - el grupo de apoyo
+
+# chichat
 - intent: cant_help
   examples: |
     - creo que no puedes ayudarme
@@ -191,6 +215,7 @@ nlu:
     - no me entiendes
     - no puedes ayudarme
     - ok, creo q no puedes ayudarme
+    - creo que no puedes ayudarme
     - creo que no me entiendes
     - no me entiendes!!
     - no logras entenderme
@@ -200,6 +225,8 @@ nlu:
     - esto no es lo que quiero
     - esto es una mierda, no me ayuda en nada
     - este chatbot no me sirve
+
+
 - intent: bot_challenge
   examples: |
     - ¿eres un bot?
@@ -209,6 +236,7 @@ nlu:
     - ¿quien eres?
     - ¿que eres?
     - como te llamas?
+
 - intent: chitchat_comoestas
   examples: |
     - ¿como estas?
@@ -222,6 +250,7 @@ nlu:
     - y tu como estas?
     - y tu que tal?
     - y tu que tal!
+
 - intent: saludo
   examples: |
     - hey
@@ -249,7 +278,9 @@ nlu:
     - hola?
     - hola hola
     - hola.........
-    - Hola Victoria
+    - Hola victoria
+    - hola victoria que tal
+
 - intent: despedida
   examples: |
     - chau
@@ -279,7 +310,9 @@ nlu:
     - cerrar el chat
     - terminar el chat
     - adiod
-    - chau Victoria
+    - adios victoria
+    - Chau Victoria
+
 - intent: affirm
   examples: |
     - si
@@ -340,6 +373,8 @@ nlu:
     - claro que si
     - si porfavor
     - correcto
+    - ok
+
 - intent: deny
   examples: |
     - no
@@ -379,7 +414,7 @@ nlu:
     - no me gusta eso
     - no hay forma
     - por ahora no
-    - por ahora on
+
 - intent: thanks
   examples: |
     - gracias
@@ -404,8 +439,7 @@ nlu:
     - muchas gracias por todo
     - muchas gracias Victoria
     - gracias por tu ayuda
-    - gracias?
-    - gracias por la informacion
+
 - intent: need_help
   examples: |
     - Necesito ayuda
@@ -420,6 +454,7 @@ nlu:
     - si, tengo un pregunta para ti
     - tengo algunas preguntas...
     - hola victoria, tengo una pregunta para ti
+
 - intent: suggestion
   examples: |
     - Sugiero que deberia ...
@@ -431,6 +466,8 @@ nlu:
     - sugiero
     - sugerencia
     - sugerir
+
+# out of scope
 - intent: out_of_scope/otro_idioma
   examples: |
     - tschüssikowski
@@ -447,6 +484,7 @@ nlu:
     - wer bist Du?
     - kannst du auch deutsch?
     - I'm speaking a non-spanish language
+
 - intent: out_of_scope/otro
   examples: |
     - 5+3=?
@@ -488,3 +526,11 @@ nlu:
     - askljdasdk
     - haz oido hablar de corona
     - pregunta fuera de alcance
+
+
+responses:
+  utter_out_of_scope/otro_idioma:
+  - text: "Solo entiendo español. Lo siento."
+
+  utter_out_of_scope/otro:
+  - text: "No puedo ayudarte con eso. Lo siento."
