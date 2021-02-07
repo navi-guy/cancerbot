@@ -1,0 +1,56 @@
+version: "2.0"
+
+rules:
+
+- rule: Despedirse cuando el user se despida
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- rule: Decir 'soy un bot', cada vez q el usuario lo rete
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: User necesita ayuda
+  steps:
+  - intent: need_help
+  - action: utter_how_help
+
+- rule: User saluda
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+
+- rule: Tema iniciar etapa
+  steps:
+    - intent: tema_iniciar_etapa
+    - action: utter_iniciar_etapa
+    - action: utter_q_iniciar_etapa
+
+- rule: Tema efectos tardios
+  steps:
+  - intent: con_efectos_secundarios_tardios
+  - action: utter_efectos_secundarios_tardios
+
+- rule: Tema duda comun
+  steps:
+  - intent: tema_duda_comun
+  - action: utter_tema_duda_comun
+
+- rule: User thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  - action: utter_p_hay_otra_pregunta
+
+- rule: User pregunta fuera del dominio
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_posibilidades
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_rephrase

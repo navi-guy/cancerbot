@@ -1,0 +1,522 @@
+version: "2.0"
+
+stories:
+
+## Tema Síntomas (12)
+
+- story: saludo + tema sintomas +fatiga + superar
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_sintomas
+  - action: utter_tema_sintomas
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+  - intent: affirm
+  - action: utter_superar_fatiga
+
+- story: saludo + tema sintomas +fatiga + deny superar +other question
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_sintomas
+  - action: utter_tema_sintomas
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+  - intent: deny
+  - action: utter_p_hay_otra_pregunta
+  - intent: affirm
+  - action: utter_p_consulta
+
+- story: saludo + fatiga + deny
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+  - intent: deny
+  - action: utter_p_hay_otra_pregunta
+
+- story: saludo + fatiga + afrontar
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+  - intent: affirm
+  - action: utter_superar_fatiga
+
+- story: symptomn fatiga + deny + afrontar + hereditario
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+  - intent: deny
+  - action: utter_p_hay_otra_pregunta
+  - intent: affirm
+  - action: utter_p_consulta
+  - intent: con_c_hereditario
+  - action: utter_c_hereditario
+
+- story: fatiga solo
+  steps:
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+
+- story: saludo + tema sintomas + tension
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_sintomas
+  - action: utter_tema_sintomas
+  - intent: con_tension
+  - action: utter_tension
+
+- story: saludo + tension
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_tension
+  - action: utter_tension
+
+- story: tension
+  steps:
+  - intent: con_tension
+  - action: utter_tension
+
+- story: saludo + tema sintomas + depresion
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_sintomas
+  - action: utter_tema_sintomas
+  - intent: con_depresion
+  - action: utter_depresion
+
+- story: saludo + depresion
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_depresion
+  - action: utter_depresion
+
+- story: depresion
+  steps:
+  - intent: con_depresion
+  - action: utter_depresion
+
+## Tema: Iniciar Etapa (11)
+
+- story: iniciar etapa
+  steps:
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+
+- story: iniciar etapa + saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+
+- story: saludo + tema iniciar etapa + cuidados de seguimiento
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cuidados_seguimiento
+  - action: utter_cuidados_seguimiento
+  - action: utter_q_que_decir
+  - intent: deny
+
+- story: saludo + tema iniciar etapa + cuidados de seguimiento + qdecir
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cuidados_seguimiento
+  - action: utter_cuidados_seguimiento
+  - action: utter_q_que_decir
+  - intent: affirm
+  - action: utter_que_decir
+
+- story: saludo + tema iniciar etapa +  qdecir
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_que_decir_al_medico
+  - action: utter_que_decir
+
+- story: tema iniciar etapa +  qdecir
+  steps:
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_que_decir_al_medico
+  - action: utter_que_decir
+
+- story: qdecir
+  steps:
+  - intent: con_que_decir_al_medico
+  - action: utter_que_decir
+
+- story: saludo + tema iniciar etapa +  cambio habitos
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cambio_habitos
+  - action: utter_cambio_habitos
+
+- story: tema iniciar etapa + cambio habitos
+  steps:
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cambio_habitos
+  - action: utter_cambio_habitos
+
+- story: cambio habitos
+  steps:
+  - intent: con_cambio_habitos
+  - action: utter_cambio_habitos
+
+- story: saludo + tema iniciar etapa + cuidados de seguimiento + qdecir + cambio habitos
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cuidados_seguimiento
+  - action: utter_cuidados_seguimiento
+  - action: utter_q_que_decir
+  - intent: affirm
+  - action: utter_que_decir
+  - intent: con_cambio_habitos
+  - action: utter_cambio_habitos
+
+## Tema: Mitos cáncer (2)
+- story: mitos cancer
+  steps:
+  - intent: con_mitos_cancer
+  - action: utter_mitos_cancer
+
+- story: mitos cancer + saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_mitos_cancer
+  - action: utter_mitos_cancer
+
+## Tema: Efectos secundarios tardios (5)
+- story: efectos tardios
+  steps:
+  - intent: con_efectos_secundarios_tardios
+  - action: utter_efectos_secundarios_tardios
+
+- story: efectos tardios + saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_efectos_secundarios_tardios
+  - action: utter_efectos_secundarios_tardios
+
+- story: saludo + efectos tardios + otra terapia
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_efectos_secundarios_tardios
+  - action: utter_efectos_secundarios_tardios
+  - intent: otra_terapia
+  - action: utter_otro_tratamiento
+
+- story: saludo + efectos tardios + quimio
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_efectos_secundarios_tardios
+  - action: utter_efectos_secundarios_tardios
+  - intent: quimioterapia
+  - action: utter_quimioterapia
+
+- story: saludo + efectos tardios + radioterapia
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_efectos_secundarios_tardios
+  - action: utter_efectos_secundarios_tardios
+  - intent: radioterapia
+  - action: utter_radioterapia
+
+## Tema: Duda comun (12)
+- story: just con_problemas_familiares
+  steps:
+  - intent: con_problemas_familiares
+  - action: utter_problemas_familiares
+
+- story: tema + con_problemas_familiares
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_duda_comun
+  - action: utter_tema_duda_comun
+  - intent: con_problemas_familiares
+  - action: utter_problemas_familiares
+
+- story: con_problemas_familiares + saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_problemas_familiares
+  - action: utter_problemas_familiares
+
+- story: tema + con_grupo_de_ayuda + con_problemas_familiares
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_duda_comun
+  - action: utter_tema_duda_comun
+  - intent: con_grupo_de_ayuda
+  - action: utter_grupo_de_ayuda
+  - intent: con_problemas_familiares
+  - action: utter_problemas_familiares
+
+- story: tema + con_grupo_de_ayuda + saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_duda_comun
+  - action: utter_tema_duda_comun
+  - intent: con_grupo_de_ayuda
+  - action: utter_grupo_de_ayuda
+
+- story: con_grupo_de_ayuda
+  steps:
+  - intent: con_grupo_de_ayuda
+  - action: utter_grupo_de_ayuda
+
+- story: con_grupo_de_ayuda + saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_grupo_de_ayuda
+  - action: utter_grupo_de_ayuda
+
+- story: tema + con_grupo_de_ayuda + con_problemas_familiares +con_fatiga
+  steps:
+  - intent: tema_duda_comun
+  - action: utter_tema_duda_comun
+  - intent: con_grupo_de_ayuda
+  - action: utter_grupo_de_ayuda
+  - intent: con_problemas_familiares
+  - action: utter_problemas_familiares
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+
+- story: saludo + hereditary path + fatiga
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_c_hereditario
+  - action: utter_c_hereditario
+  - intent: tema_sintomas
+  - action: utter_tema_sintomas
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+
+- story: hereditary
+  steps:
+  - intent: con_c_hereditario
+  - action: utter_c_hereditario
+
+- story: hereditary + saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: con_c_hereditario
+  - action: utter_c_hereditario
+
+- story: tema + hereditary
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_duda_comun
+  - action: utter_tema_duda_comun
+  - intent: con_c_hereditario
+  - action: utter_c_hereditario
+
+## CHITCHAT (9)
+
+- story: saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+
+- story: saludo + como estas
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: chitchat_comoestas
+  - action: utter_a_comoestas
+
+- story: user agradecido + despedida
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  - action: utter_p_hay_otra_pregunta
+  - intent: deny
+  - action: utter_despedida
+
+- story: user agradecido + consulta
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  - action: utter_p_hay_otra_pregunta
+  - intent: affirm
+  - action: utter_p_consulta
+
+- story: user decepcionado + sugerencia
+  steps:
+  - intent: cant_help
+  - action: utter_no_help
+  - intent: suggestion
+  - action: utter_thanks_for_suggestion
+
+- story: user decepcionado + sugerencia
+  steps:
+  - intent: cant_help
+  - action: utter_no_help
+  - intent: suggestion
+  - action: utter_thanks_for_suggestion
+
+- story: user necesita ayuda
+  steps:
+  - intent: need_help
+  - action: utter_how_help
+
+- story: despedida simple
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+## OUT OF SCOPE (10)
+
+- story: out of scope solo
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_posibilidades
+
+# oos otro
+- story: out of scope and choose iniciar etapa + cuidados seguimiento + que decir
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_posibilidades
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cuidados_seguimiento
+  - action: utter_cuidados_seguimiento
+  - action: utter_q_que_decir
+  - intent: affirm
+  - action: utter_que_decir
+
+- story: out of scope and choose iniciar etapa + only cuidados seguimiento
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_posibilidades
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cuidados_seguimiento
+  - action: utter_cuidados_seguimiento
+  - action: utter_q_que_decir
+  - intent: deny
+  - action: utter_p_hay_otra_pregunta
+
+- story: out of scope and choose iniciar etapa + cambio habitos
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_posibilidades
+  - intent: tema_iniciar_etapa
+  - action: utter_iniciar_etapa
+  - action: utter_q_iniciar_etapa
+  - intent: con_cambio_habitos
+  - action: utter_cambio_habitos
+
+- story: out of scope and choose sintoma + fatiga
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_posibilidades
+  - intent: tema_sintomas
+  - action: utter_tema_sintomas
+  - intent: con_fatiga
+  - action: utter_fatiga
+  - action: utter_q_afrontar_s
+  - intent: affirm
+  - action: utter_superar_fatiga
+
+ ## STORIES USANDO RASA INTERACTIVE 
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+
+- story: interactive_story_2
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: tema_duda_comun
+  - action: utter_tema_duda_comun
+  - intent: con_c_hereditario
+  - action: utter_c_hereditario
+  - intent: thanks
+  - action: utter_thanks
+  - action: utter_p_hay_otra_pregunta
+  - intent: con_grupo_de_ayuda
+  - action: utter_grupo_de_ayuda
+  - intent: con_problemas_familiares
+  - action: utter_problemas_familiares
+  - intent: thanks
+  - action: utter_thanks
+  - action: utter_p_hay_otra_pregunta
+  - intent: deny
+  - action: utter_despedida
+  - intent: despedida
+  - action: utter_despedida
