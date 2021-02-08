@@ -115,7 +115,8 @@ responses:
   - text: "Una vez terminado el tratamiento de cancer usted debe recibir un plan de cuidados de
           seguimiento de cancer, el propósito de esto es ver a un médico para exámenes regulares,
           en las consultas el médico revisará si tiene efectos secundarios del tratamiento y
-          examinará si su cancer ha regresado o se ha disemaninado a otra parte del cuerpo."
+          examinará su caso para brindarle tranquilidad ante la posibilidad de un regreso 
+          o disemaninación de su cancer."
 
   utter_q_que_decir:
   - text: "¿Desea saber algunos tips sobre que decirle a su médico en sus citas de seguimiento?"
@@ -172,8 +173,9 @@ responses:
            a causa de la quimioterapia."
 
   utter_radioterapia:
-  - text: "Las mujeres pueden experimentar efectos secundarios relacionados con la radiación meses
-            o años después del tratamiento. \n
+  - text: "Es posible que puedas experimentar algunos efectos secundarios relacionados a la radiación
+           meses o años después del tratamiento. No obstante, tenga en cuenta que la mayoría de pacientes
+           no presenta estos problemas a largo plazo. \n
            - Estenosis vaginal: tanto la radioterapia con rayo externo  como la braquiterapia pueden
              causar formación de tejido cicatricial en la vagina. El tejido cicatricial puede causar
              que la vagina sea más estrecha (estenosis vaginal), con menos capacidad de estirarse,
