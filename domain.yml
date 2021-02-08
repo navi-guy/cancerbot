@@ -114,8 +114,7 @@ responses:
   utter_cuidados_seguimiento:
   - text: "Una vez terminado el tratamiento de cancer usted debe recibir un plan de cuidados de
           seguimiento de cancer, el propósito de esto es ver a un médico para exámenes regulares,
-          en las consultas el médico revisará si tiene efectos secundarios del tratamiento y
-          examinará si su cancer ha regresado o se ha disemaninado a otra parte del cuerpo."
+          en las consultas el médico revisará su caso y determinará la mejor forma de proceder para brindarle tranquilidad y bienestar en situaciones en donde se presenten efectos secundarios o cómo evoluciona el cáncer"
 
   utter_q_que_decir:
   - text: "¿Desea saber algunos tips sobre que decirle a su médico en sus citas de seguimiento?"
